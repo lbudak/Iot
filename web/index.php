@@ -22,7 +22,6 @@ $db->Connect();
     <section class="container d-flex flex-column  align-items-center mb-4">
         <h1>Red Hot Smart Pepper</h1>
     </section>
-
     <?php 
         $db->CloseConnection();
     ?>
