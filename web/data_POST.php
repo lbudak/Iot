@@ -4,9 +4,9 @@
 <?php
 require 'database.php';
 
-$moist = $_GET["moist"];
-$tempC = $_GET["tempC"];
-$intenz = $_GET["intenz"];
+$moist = $_POST["moist"];
+$tempC = $_POST["tempC"];
+$intenz = $_POST["intenz"];
 
 
 $db = new Database("db" , "ferit", "user", "test");
@@ -16,6 +16,8 @@ $query = "INSERT INTO pepper_iot (moist, tempC, intenz) VALUES ('". $moist ."', 
 $db->Update($query);
  
 $db->CloseConnection();
+
+echo "ajmooo"
 ?>
 </body>
 </html>
