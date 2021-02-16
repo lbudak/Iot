@@ -12,7 +12,7 @@ $intenz = $_POST["intenz"];
 $db = new Database("db" , "ferit", "user", "test");
 $db->Connect();
 
-$query = "INSERT INTO pepper_iot (moist, tempC, intenz, time) VALUES ('". $moist ."', '". $tempC ."', '". $intenz ."', '"sysdate()"')";
+$query = "INSERT INTO pepper_iot (moist, tempC, intenz, time) VALUES ('". $moist ."', '". $tempC ."', '". $intenz ."', sysdate())";
 $db->Update($query);
  
 $db->CloseConnection();
