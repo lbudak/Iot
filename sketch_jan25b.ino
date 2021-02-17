@@ -1,3 +1,5 @@
+#include <ESP8266WiFi.h>
+#include <WiFiClient.h> 
 #include "DHT.h"
 #define DHTTYPE DHT11 
 #define DHTPIN 2
