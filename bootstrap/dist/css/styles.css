@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: rgb(27, 27, 27);
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -4335,7 +4335,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgb(109, 109, 109);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -4394,9 +4394,21 @@ input[type=button].btn-block {
 .card-header {
   padding: 0.75rem 1.25rem;
   margin-bottom: 0;
+  font-size: 20px;
   background-color: rgba(0, 0, 0, 0.03);
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  color: rgb(39, 39, 39);
 }
+
+.sensor_color {
+  color: rgb(146, 146, 146);
+}
+
+.temp {
+  font-size: 25px;
+  color: #007ce9;
+}
+
 .card-header:first-child {
   border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
@@ -4557,11 +4569,12 @@ input[type=button].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #e9ecef;
+  background-color: #6A6A6A;
   border-radius: 0.25rem;
 }
 
 .breadcrumb-item {
+  color: rgb(0, 0, 0);
   display: flex;
 }
 .breadcrumb-item + .breadcrumb-item {
@@ -4570,7 +4583,7 @@ input[type=button].btn-block {
 .breadcrumb-item + .breadcrumb-item::before {
   display: inline-block;
   padding-right: 0.5rem;
-  color: #6c757d;
+  color: #363636;
   content: "/";
 }
 .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -4580,7 +4593,7 @@ input[type=button].btn-block {
   text-decoration: none;
 }
 .breadcrumb-item.active {
-  color: #6c757d;
+  color: #242424;
 }
 
 .pagination {
@@ -6116,11 +6129,15 @@ button.bg-secondary:focus {
   background-color: #035c00 !important;
 }
 
-.center {
+.center_div {
   display: flex;
   align-items: center;
-  justify-content: center;
+  flex: 100%;
   flex-wrap: wrap;
+}
+
+.center {
+  justify-content: center;
   background-color: #006fca;
   color: #fff;
   margin: auto;
@@ -6128,6 +6145,21 @@ button.bg-secondary:focus {
   height: 150px;
   padding: 10px;
   font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.center_temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #fff;
+  margin: auto;
+  width: 25%;
+  height: 150px;
+  padding: 10px;
+  font-size: 10px;
 }
 
 .center button {
@@ -7660,6 +7692,7 @@ button.bg-dark:focus {
 
 .mt-4,
 .my-4 {
+  color: rgb(148, 148, 148);
   margin-top: 1.5rem !important;
 }
 

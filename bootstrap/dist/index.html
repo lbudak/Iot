@@ -42,27 +42,37 @@
                 <main>
                     <div class="container-fluid">
                         <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Pepper Stats</li>
-                        </ol>
+                     
                         <div class="row">
+                        <div class="center_div">
                         <div id="class_changer" class="center">
                             <p id="warning"></p>
                             <button onclick="showMoistGraph();showIntensityGraph();showTempGraph();">Update Graphs</button>
                         </div>
                         </div>
+                        <div class="center_temp">
+                            <p class="temp" id="current_t"></p>
+                        </div>
+                        </div>
                         <div>
                         <div class="current_div">
                             <div>
-                                    <canvas class="moist-gauge"></canvas>                                
+                                <canvas class="moist-gauge"></canvas>  
+                                <div id="current_temp" class="chartjs-wrapper">
+                                    <p class="sensor_color" id="current_m"></p>
+                                </div>                               
                             </div>                                   
                             <div>
-                                <canvas class="chartjs-gauge"></canvas>                            
-                        </div>
+                                <canvas class="chartjs-gauge"></canvas>  
+                                <div id="current_temp" class="chartjs-wrapper">
+                                    <p class="sensor_color" id="current_i"></p>
+                                </div>                           
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="card mb-4">
+                                    
                                     <div class="card-header">
                                         <i class="fas fa-chart-area mr-1"></i>
                                         Moisture Graph (%)
@@ -73,6 +83,7 @@
                             </div>
                             <div class="col-xl-6">
                                 <div class="card mb-4">
+                                    
                                     <div class="card-header">
                                         <i class="fas fa-chart-area mr-1"></i>
                                         Intensity Graph (%)
@@ -81,11 +92,8 @@
                                 </div>
                             </div>
                             <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div id="current_temp" class="chartjs-wrapper">
-                                        <p id="current_t"></p>
-                                    </div>   
-                                    <div class="card-header">
+                                <div class="card mb-4">                                     
+                                    <div class="card-header card3">
                                         <i class="fas fa-chart-area mr-1"></i>
                                         Temperature Graph (°C)
                                     </div>                                    
@@ -96,12 +104,8 @@
                         
                     </div>
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; IoT</div>
-                        </div>
-                    </div>
+                <footer>
+                    <div class="text-muted">Copyright &copy; IoT</div>
                 </footer>
             </div>
         </div>
