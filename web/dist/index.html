@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>RHSP</title>
+        <link href="css/styles.css" rel="stylesheet" />
+        <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">Red Hot Smart Pepper</a>
+            <!-- Navbar-->
+        </nav>
+        <div id="layoutSidenav">
+            
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Dashboard</h1>
+                     
+                        <div class="row">
+                        <div class="center_div">
+                        <div id="class_changer" class="center">
+                            <p id="warning"></p>
+                            <button onclick="showMoistGraph();showIntensityGraph();showTempGraph();">Update Graphs</button>
+                        </div>
+                        </div>
+                        <div class="center_temp">
+                            <p class="temp" id="current_t"></p>
+                        </div>
+                        </div>
+                        <div>
+                        <div class="current_div">
+                            <div>
+                                <canvas class="moist-gauge"></canvas>  
+                                <div id="current_temp" class="chartjs-wrapper">
+                                    <p class="sensor_color" id="current_m"></p>
+                                </div>                               
+                            </div>                                   
+                            <div>
+                                <canvas class="chartjs-gauge"></canvas>  
+                                <div id="current_temp" class="chartjs-wrapper">
+                                    <p class="sensor_color" id="current_i"></p>
+                                </div>                           
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area mr-1"></i>
+                                        Moisture Graph (%)
+                                    </div>
+                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">
+                                    
+                                    <div class="card-header">
+                                        <i class="fas fa-chart-area mr-1"></i>
+                                        Intensity Graph (%)
+                                    </div>                                    
+                                    <div class="card-body"><canvas id="myIntensityChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="card mb-4">                                     
+                                    <div class="card-header card3">
+                                        <i class="fas fa-chart-area mr-1"></i>
+                                        Temperature Graph (°C)
+                                    </div>                                    
+                                    <div class="card-body"><canvas id="myTempChart" width="100%" height="40"></canvas></div>
+                                </div>
+                            </div>                            
+                        </div>
+                        
+                    </div>
+                </main>
+                <footer>
+                    <div class="text-muted">Copyright &copy; IoT</div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/datatables-demo.js"></script>
+    </body>
+</html>
