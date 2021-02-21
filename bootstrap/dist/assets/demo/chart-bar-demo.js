@@ -106,7 +106,7 @@ function showIntensityGraph() {
         var current_intensity = [intensities[0], 100 - intensities[0]];
 
         change_gauge(chart, "Gauge", current_intensity); 
-        document.getElementById("current_i").innerHTML = intensities[0].toString() + "%";
+        document.getElementById("current_i").innerHTML = "Intensity: " + intensities[0].toString() + "%";
 
         var ctx = document.getElementById("myIntensityChart");
         var myLineChart = new Chart(ctx, {
@@ -184,7 +184,7 @@ function showMoistGraph() {
         var current_moisture = [moistures[0], 100 - moistures[0]];
 
         change_gauge_moist(moist_chart, "Gauge", current_moisture);
-        document.getElementById("current_m").innerHTML = moistures[0].toString() + "%";
+        document.getElementById("current_m").innerHTML = "Moisture: " + moistures[0].toString() + "%";
 
         var ctx = document.getElementById("myAreaChart");
         var myLineChart = new Chart(ctx, {
