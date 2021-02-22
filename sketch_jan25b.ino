@@ -69,7 +69,8 @@ void PostData(int moist, int intenz, float tempC){
     delay(3000);
   }  
   client.println("POST /data_POST.php HTTP/1.1");
-  client.println("Host: 192.168.43.18");
+  client.print("Host: ");
+  client.println(host);
   client.println("Content-Type: application/x-www-form-urlencoded");
   client.print("Content-Length: ");
   client.println(postData.length());
