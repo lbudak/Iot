@@ -13,7 +13,7 @@ int Pin_buzzer = 4;
 
 const char *ssid = "Omae wa mou shindeiru";  
 const char *password = "81G_pp_P0w3R";
-const char *host = "192.168.43.18"; 
+const char *host = "192.168.43.137"; 
  
 void setup() {
     Serial.begin(115200);
